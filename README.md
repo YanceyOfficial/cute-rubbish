@@ -8,6 +8,10 @@
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Install dependencies.
+
 ### `yarn start`
 
 Runs the app in the Terminal and input the name of rubbish.<br>
