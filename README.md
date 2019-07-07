@@ -4,6 +4,8 @@
 [![Node](https://img.shields.io/badge/node-%3E%3D8.0.0-blue.svg)](https://github.com/YanceyOfficial/cute-rubbish)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/YanceyOfficial/cute-rubbish/pulls)
 
+[圾你太美](https://yancey-assets.oss-cn-beijing.aliyuncs.com/Jietu20190707-194020@2x.jpg)
+
 ## Available Scripts
 
 In the project directory, you can run:
