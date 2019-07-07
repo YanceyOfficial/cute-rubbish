@@ -1,0 +1,24 @@
+{
+  "name": "cute-rubbish",
+  "version": "1.0.0",
+  "description": "【拯救上海市民向】圾你太美",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanceyOfficial/cute-rubbish.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YanceyOfficial/cute-rubbish/issues"
+  },
+  "homepage": "https://github.com/YanceyOfficial/cute-rubbish#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "crawler": "^1.2.1"
+  }
+}
