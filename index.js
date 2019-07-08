@@ -10,6 +10,16 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+const question = () =>
+  rl.question(chalk.red('请输入垃圾名称, q 键退出. >>> '), function(answer) {
+    if (answer.toLocaleLowerCase() === 'q') {
+      rl.close();
+    }
+    sortRubbish(answer);
+  });
+
+question();
+
 const sortRubbish = kw => {
   const crawler = new Crawler({
     maxConnections: 10,
@@ -67,16 +77,17 @@ const sortRubbish = kw => {
         }
 
         done();
-        rl.close();
+        // rl.close();
+        question();
       }
     },
   });
   crawler.queue(encodeURI(baseUrl + kw));
 };
 
-rl.question(chalk.red('Iuput the name of rubbish. >>> '), function(answer) {
-  sortRubbish(answer);
-});
+// rl.question(chalk.red('Iuput the name of rubbish. >>> '), function(answer) {
+//   sortRubbish(answer);
+// });
 
 rl.on('close', function() {
   process.exit(0);
