@@ -19,7 +19,7 @@ const sortRubbish = kw => {
       } else {
         const $ = res.$;
 
-        const target = chalk.blue.bold(
+        const target = chalk.magenta.bold(
           $('.info')
             .text()
             .trim(),
@@ -32,13 +32,17 @@ const sortRubbish = kw => {
             $('.title div')
               .text()
               .trim()
-              .split('：')[1],
+              .split('：')
+              .splice(1)
+              .toString()
+              .replace(/\s+/g, ''),
           )}`;
 
           const include = `${target}主要包括: ${chalk.red(
             $('.desc')
               .text()
-              .trim(),
+              .trim()
+              .replace(/\s+/g, ''),
           )}`;
 
           const tips = Object.values($('li'))
@@ -72,7 +76,7 @@ const sortRubbish = kw => {
   crawler.queue(encodeURI(baseUrl + kw));
 };
 
-rl.question('Iuput the name of rubbish. >>> ', function(answer) {
+rl.question(chalk.red('Iuput the name of rubbish. >>> '), function(answer) {
   sortRubbish(answer);
 });
 
