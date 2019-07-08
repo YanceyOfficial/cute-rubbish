@@ -31,7 +31,6 @@ const sortRubbish = kw => {
           const desc = `${target}是指: ${chalk.yellow(
             $('.title div')
               .text()
-              .trim()
               .split('：')
               .splice(1)
               .toString()
@@ -41,7 +40,6 @@ const sortRubbish = kw => {
           const include = `${target}主要包括: ${chalk.red(
             $('.desc')
               .text()
-              .trim()
               .replace(/\s+/g, ''),
           )}`;
 
